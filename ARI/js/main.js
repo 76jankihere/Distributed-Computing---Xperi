@@ -262,9 +262,9 @@ function takeSnapshot() {
   var formData = new FormData();
     // Get the current UNIX timestamp in milliseconds
 var unixTimestamp = Date.now();
-
+   var name  = unixTimestamp+'.png';
   // Append the Blob object to the FormData
-  formData.append(unixTimestamp, blob, 'image.png');
+  formData.append('image', blob, name);
 
   // Send the FormData to the server using XMLHttpRequest
   var xhr = new XMLHttpRequest();
@@ -272,7 +272,7 @@ var unixTimestamp = Date.now();
   xhr.onload = function () {
     if (xhr.status === 200) {
       console.log('Image uploaded successfully');
-      window.location.href = "dense.php?i="+unixTimestamp;
+      window.location.href = "dense.php?i="+name;
     } else {
       console.error('Error uploading image:', xhr.statusText);
     }

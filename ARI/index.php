@@ -7,7 +7,7 @@
     />
     <meta
       name="description"
-      content="Smart Device Camera Template for HTML, CSS, JS and WebRTC"
+      content=""
     />
     <meta name="keywords" content="HTML,CSS,JavaScript, WebRTC, Camera" />
     <meta name="author" content="Kasper Kamperman" />
