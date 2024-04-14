@@ -1,9 +1,13 @@
 <?php
 $f= '';
+// Check if the 'i' parameter is set in the URL
 if (isset($_GET['i'])) {
     // Get the value of 'i'
     $f = $_GET['i'].'.png';
     dense('');
+    // Output the timestamp
+    //echo "Timestamp received: $timestamp";
+    //dense($f)
 } else {
     die();
 }
@@ -19,7 +23,7 @@ if(!empty($f)){
 }
 else{
 // Image URL
-$image_url = 'https://static.wikia.nocookie.net/the-snack-encyclopedia/images/7/7d/Apple.png/revision/latest?cb=20200706145821';
+$image_url = 'https://i.insider.com/5dd70284fd9db2267c19edfc?width=700 ';
 }
 
 // Request parameters
@@ -85,7 +89,7 @@ $url = "https://xperig.openai.azure.com/openai/deployments/ARI/chat/completions?
 // Set the request headers
 $headers = array(
     "Content-Type: application/json",
-    "api-key: " 
+    "api-key: " // Replace YOUR_API_KEY with your actual API key
 );
 $s = 'masters';
 // Set the request body
@@ -139,9 +143,10 @@ if (isset($responseData['choices']) && is_array($responseData['choices'])) {
 
         // Output the content of the message
         echo "Message content: $messageContent";
+        tts($messageContent);
         //var_dump($responseData);
     } else {
-        echo "Error: API limit exceed wait 30s";
+       echo "Error: API limit exceed wait 30s";
     }
 } else {
     echo "Error: API limit exceed wait 30s";
@@ -155,6 +160,24 @@ curl_close($ch);
 }
 ?>
 
+
+<?php  
+function tts($m){
+$m = str_replace("<br>", "", $m);
+$m = str_replace(['"', "'",','], '', $m);
+$m = preg_replace('/\s+/', ' ', $m);
+$m = trim($m);
+echo '<script type="text/JavaScript">  
+var msg = new SpeechSynthesisUtterance(); 
+msg.rate = 0.9;
+msg.text ="'. $m.'";
+window.speechSynthesis.speak(msg);
+     </script>' 
+; 
+}
+?> 
+
+
 <?php
 function openai(){
 // Set the endpoint URL
@@ -163,7 +186,7 @@ $url = "https://api.openai.com/v1/chat/completions";
 // Set the request headers
 $headers = array(
     "Content-Type: application/json",
-    "Authorization: Bearer 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" // Replace YOUR_OPENAI_API_KEY with your actual API key
+    "Authorization: Bearer " // Replace YOUR_OPENAI_API_KEY with your actual API key
 );
 $s = 'masters';
 // Set the request body
