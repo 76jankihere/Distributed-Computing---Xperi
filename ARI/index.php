@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION["level"]))
+{
+	header("Location: /login");
+}
+setcookie("sub", $_SESSION['sub'], time() + (86400 * 30), "/");
+?>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -11,7 +19,7 @@
     />
     <meta name="keywords" content="HTML,CSS,JavaScript, WebRTC, Camera" />
     <meta name="author" content="Kasper Kamperman" />
-    <title>Mobile First Camera Template</title>
+    <title></title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
@@ -37,10 +45,10 @@
           aria-pressed="false"
         ></button>
 
-        <form id="imageForm" enctype="multipart/form-data" action="dense.php" method="post">
+        <!-- <form id="imageForm" enctype="multipart/form-data" action="dense.php" method="post">
   <input type="hidden" id="imageData" name="imageData">
-  <button type="button" onclick="submitForm()">Submit Form</button>
-</form>
+  <button type="button" onclick="submitForm()"></button>
+</form> -->
 
 
 
