@@ -26,9 +26,9 @@ function azure_AI($c){
     
     $data = array(
         "messages" => array(
-            array("role" => "system", "content" => "You are an AI assistant that answers the question in short understandable way."),
+            array("role" => "system", "content" => "You are an AI assistant that answers the question in short understandable way to education level of " .$s),
             array("role" => "user", "content" => 
-                 $c . "answer in short briefly directly education level ".$s)
+                 $c . "answer in short briefly directly ")
         ),
         "max_tokens" => 800,
         "temperature" => 0.7,
@@ -60,10 +60,10 @@ function azure_AI($c){
                 $messageContent = $firstChoice['message']['content'];
                 return $messageContent;
             } else {
-               echo "Error: API limit exceed wait 30s";
+               echo "Error: API limit exceed wait 30seconds";
             }
         } else {
-            echo "Error: API limit exceed wait 30s";
+            echo "Error: API limit exceed wait 30seconds";
         }
     }
     

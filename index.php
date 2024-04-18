@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Xperi</title>
+	<title>Home Flat</title>
 	
 	<link href="../media/vendor/joomla-custom-elements/css/joomla-alert.min44b7.css?0.2.0" rel="stylesheet" />
 	<link href="../plugins/system/jce/css/contentcd0a.css?aa754b1f19c7df490be4b958cf085e7c" rel="stylesheet" />

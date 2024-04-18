@@ -13,7 +13,7 @@ if(isset($_POST['mail']) && isset($_POST['password'])){
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $mail = $_POST['mail'];
+        $mail = strtolower($_POST['mail']);
         $password = $_POST['password'];
 
         $mail = stripslashes($mail);
@@ -31,7 +31,7 @@ if(isset($_POST['mail']) && isset($_POST['password'])){
             $_SESSION['sub'] = $_POST['sub'];
             if($row['level'] == 'prof'){
                 $_SESSION['auth'] = 1;
-                header("location: ../ari/prof/index.php");
+                header("location: ../ARI/prof/index.php");
                 exit;
                 die();
             }

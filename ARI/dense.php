@@ -5,7 +5,7 @@ if(!isset($_SESSION['level'])){
     header("Location: ./login/index.php");
     exit; // Make sure to exit after redirection
 }else{
-    $level = $_SESSION['level'];
+    $s = $_SESSION['level'];
 }
 
 $f = '';
@@ -84,7 +84,7 @@ function azure_AI($c){
         "api-key: "
     );
     
-
+    global $s;
     $data = array(
         "messages" => array(
             array("role" => "system", "content" => "You are an AI assistant that identifies objects based on provided descriptions and gives students all information related to the object identified based on descriptions."),

@@ -36,7 +36,7 @@ if(isset($_POST['subject']) && isset($_POST['model'])){
         }
     }
 }else{
-    die('k');
+
 }
 ?>
 <!DOCTYPE html>
@@ -68,12 +68,14 @@ if(isset($_POST['subject']) && isset($_POST['model'])){
                         </div>
                         <form action="index.php" method="POST">
                             <input class="form-control" type="text" name="subject" placeholder="Subject" required>
-                            <input class="form-control" type="text" name="model" placeholder="Paste model URL " required>
+                            <input class="form-control" type="text" name="model" placeholder="Paste Trained model URL " required>
                             <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn">Save</button> 
                             </div>
                         </form>
-                       
+                       <div class="form-button">
+                               <a href="https://teachablemachine.withgoogle.com/train/image"> <button id="Create"  class="ibtn">Create Model</button></a> 
+                            </div>
                     </div>
                 </div>
             </div>
