@@ -12,7 +12,6 @@ $(window).on("load", function() {
             $('.error-message').remove();
             $('<small class="error-message">Please fill the field.</small>').insertAfter(inputField);
         }
-
     });
     
     $('.btn-tab-next').on('click',function(e){
