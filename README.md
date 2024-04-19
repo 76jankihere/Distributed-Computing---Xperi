@@ -49,9 +49,9 @@ Xperi is an innovative web-based platform designed to enhance the learning exper
 We welcome contributions from the community. If you're interested in enhancing the platform or have suggestions, please follow the standard GitHub pull request process to submit your changes.
 
 ## Team Members
-- Yaswanth Alla (Team Leader, Lead Developer)
-- Jankiben Parmar (UI Designer)
-- Lavanya Medarametla (UI Designer + Researcher)
+- Yaswanth Alla (Team Leader, Lead Developer) Github ID : yash-alla
+- Jankiben Parmar (UI Designer) Github ID : 76jankihere
+- Lavanya Medarametla (UI Designer + Researcher) lavanya428m
 
 ## Acknowledgements
 Special thanks to all contributors and supporters of the Xperi project. Your feedback and contributions have been invaluable in making this project a reality.
