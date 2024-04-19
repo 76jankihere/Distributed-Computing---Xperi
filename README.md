@@ -51,7 +51,7 @@ We welcome contributions from the community. If you're interested in enhancing t
 ## Team Members
 - Yaswanth Alla (Team Leader, Lead Developer)
 - Jankiben Parmar (UI Designer)
-- Lavanya Medarametla (UI Designer)
+- Lavanya Medarametla (UI Designer + Researcher)
 
 ## Acknowledgements
 Special thanks to all contributors and supporters of the Xperi project. Your feedback and contributions have been invaluable in making this project a reality.
